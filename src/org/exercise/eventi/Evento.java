@@ -14,13 +14,13 @@ public class Evento {
 
     public Evento(String titolo, LocalDate data, int postiTotali, int postiPrenotati) throws IllegalArgumentException  {
         if (data.isBefore(LocalDate.now())){
-            throw new IllegalStateException("La data dell'evento è già passata. ");
+            throw new IllegalArgumentException("La data dell'evento è già passata. ");
         }
         if (postiTotali <= 0){
-            throw new IllegalStateException("I posti totali non possono essere negativi.");
+            throw new IllegalArgumentException("I posti totali non possono essere negativi.");
         }
         if (titolo.isEmpty()){
-            throw new IllegalStateException("Il titolo non può essere vuoto.");
+            throw new IllegalArgumentException("Il titolo non può essere vuoto.");
         }
 
         this.titolo = titolo;
