@@ -13,6 +13,9 @@ public class Concerto extends Evento{
     //COSTRUTTORE
     public Concerto(String titolo, LocalDate data, int postiTotali, int postiPrenotati, LocalTime ora, BigDecimal prezzo) throws IllegalArgumentException {
         super(titolo, data, postiTotali, postiPrenotati);
+        if(prezzo.compareTo(BigDecimal.ZERO) < 0){
+            throw new IllegalArgumentException("Il prezzo non può essere negativo");
+        }
         this.ora = ora;
         this.prezzo = prezzo;
     }
