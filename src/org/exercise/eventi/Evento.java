@@ -73,7 +73,7 @@ public class Evento {
             throw new IllegalStateException("La data dell'evento è già passata. ");
         }
         if (postiPrenotati - numPosti < 0){
-            throw new IllegalStateException("Non ci sono abbastanza prenotazioni per fare l'evento. ");
+            throw new IllegalStateException("Non puoi disdire più posti di quelli che hai prenotato. ");
         }
         postiPrenotati -= numPosti;
     }

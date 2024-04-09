@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Scanner;
 
+
+
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -23,6 +25,7 @@ public class Main {
 
                 System.out.println("Inserisci quanti posti totali possono esserci:");
                 int newPostiPrenotati = Integer.parseInt(scan.nextLine());
+
                 System.out.println("Inserisci l'ora (HH:mm):");
                 LocalTime ora = LocalTime.parse(scan.nextLine());
 
@@ -33,16 +36,16 @@ public class Main {
 
                 play = true;
 
-            } catch (Exception e){
+            } catch (Exception e ){
                 System.out.println("C'è un errore:" + e.getMessage() );
 
             }
         }
 
-            System.out.println("------------------------------");
-            System.out.println();
-            System.out.println("Evento creato con successo:" + concerto);
-            System.out.println("------------------------------");
+        System.out.println("------------------------------");
+        System.out.println();
+        System.out.println("Evento creato con successo:" + concerto);
+        System.out.println("------------------------------");
 
 
             //punto 2 milestone 2
