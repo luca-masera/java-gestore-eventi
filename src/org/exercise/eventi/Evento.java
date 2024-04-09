@@ -19,12 +19,17 @@ public class Evento {
         if (postiTotali <= 0){
             throw new IllegalStateException("I posti totali non possono essere negativi.");
         }
+        if (titolo.isEmpty()){
+            throw new IllegalStateException("Il titolo non può essere vuoto.");
+        }
 
         this.titolo = titolo;
         this.data = data;
         this.postiTotali = postiTotali;
         this.postiPrenotati = 0;
     }
+
+
 
     //GETTER E SETTER
 
@@ -75,7 +80,7 @@ public class Evento {
 
     @Override
     public String toString() {
-        return data.toString() + "-" + titolo;
+        return "Data dell'evento:"+ " " + data.toString() + "-" + "Nome dell'evento: " + " " + titolo;
     }
 }
 
